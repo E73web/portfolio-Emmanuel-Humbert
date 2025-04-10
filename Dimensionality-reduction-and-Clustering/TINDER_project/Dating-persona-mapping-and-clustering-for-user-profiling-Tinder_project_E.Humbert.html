@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Dating Persona Mapping and Clustering for User Profiling_E.HUMBERT</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Dating-persona-mapping-and-clustering-for-user-profiling-Tinder_project_E.Humbert</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7480,7 +7480,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Packages</span>
@@ -7488,6 +7488,8 @@ a.anchor-link {
 
 <span class="c1"># Visualization</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
 
 <span class="c1"># Package for MCA (Multiple Correspondence Analysis)</span>
 <span class="kn">import</span> <span class="nn">prince</span>
@@ -7515,7 +7517,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Opening tinder dataset</span>
@@ -7534,7 +7536,7 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -7686,7 +7688,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">tinder_df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -7708,7 +7710,7 @@ a.anchor-link {
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -7980,7 +7982,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">tinder_df</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>
@@ -8031,7 +8033,7 @@ None
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Rounding values</span>
@@ -8046,7 +8048,7 @@ None
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Rename columns</span>
@@ -8161,7 +8163,7 @@ None
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">users_qualit</span><span class="o">=</span> <span class="n">tinder_df</span><span class="p">[[</span><span class="s2">"Country"</span><span class="p">,</span> <span class="s2">"voyage"</span><span class="p">,</span> <span class="s2">"laugh"</span><span class="p">,</span> <span class="s2">"photo.elevator"</span><span class="p">,</span> <span class="s2">"photo.beach"</span><span class="p">]]</span>
@@ -8252,31 +8254,31 @@ None
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>C:\Users\emmhu\AppData\Local\Temp\ipykernel_29508\3508769182.py:4: SettingWithCopyWarning: 
+<pre>C:\Users\emmhu\AppData\Local\Temp\ipykernel_3968\3508769182.py:4: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   users_qualit[i] = users_qualit[i].astype("str")
-C:\Users\emmhu\AppData\Local\Temp\ipykernel_29508\3508769182.py:4: SettingWithCopyWarning: 
+C:\Users\emmhu\AppData\Local\Temp\ipykernel_3968\3508769182.py:4: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   users_qualit[i] = users_qualit[i].astype("str")
-C:\Users\emmhu\AppData\Local\Temp\ipykernel_29508\3508769182.py:4: SettingWithCopyWarning: 
+C:\Users\emmhu\AppData\Local\Temp\ipykernel_3968\3508769182.py:4: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   users_qualit[i] = users_qualit[i].astype("str")
-C:\Users\emmhu\AppData\Local\Temp\ipykernel_29508\3508769182.py:4: SettingWithCopyWarning: 
+C:\Users\emmhu\AppData\Local\Temp\ipykernel_3968\3508769182.py:4: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   users_qualit[i] = users_qualit[i].astype("str")
-C:\Users\emmhu\AppData\Local\Temp\ipykernel_29508\3508769182.py:4: SettingWithCopyWarning: 
+C:\Users\emmhu\AppData\Local\Temp\ipykernel_3968\3508769182.py:4: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
@@ -8292,7 +8294,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Perform MCA with prince</span>
@@ -8316,7 +8318,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [50]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Using One-Hot Encoding to convert categorical variables in users_qualit into a disjunctive table</span>
@@ -8337,7 +8339,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Displaying row coordinates</span>
@@ -8379,7 +8381,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [52]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Displaying column coordinates</span>
@@ -8419,7 +8421,7 @@ photo.beach_1     1.558052  0.011629
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [61]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Visualizing the Results</span>
@@ -8442,26 +8444,26 @@ photo.beach_1     1.558052  0.011629
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[61]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
-  #altair-viz-0153e7919bd04dbc99d862bc006790d4.vega-embed {
+  #altair-viz-ec001c404dd340c5a7149611531c4ea1.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-0153e7919bd04dbc99d862bc006790d4.vega-embed details,
-  #altair-viz-0153e7919bd04dbc99d862bc006790d4.vega-embed details summary {
+  #altair-viz-ec001c404dd340c5a7149611531c4ea1.vega-embed details,
+  #altair-viz-ec001c404dd340c5a7149611531c4ea1.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-0153e7919bd04dbc99d862bc006790d4"></div>
+<div id="altair-viz-ec001c404dd340c5a7149611531c4ea1"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-0153e7919bd04dbc99d862bc006790d4") {
-      outputDiv = document.getElementById("altair-viz-0153e7919bd04dbc99d862bc006790d4");
+    if (outputDiv.id !== "altair-viz-ec001c404dd340c5a7149611531c4ea1") {
+      outputDiv = document.getElementById("altair-viz-ec001c404dd340c5a7149611531c4ea1");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -8507,9 +8509,58 @@ photo.beach_1     1.558052  0.011629
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "circle", "size": 50}, "encoding": {"color": {"field": "variable", "type": "nominal"}, "tooltip": [{"field": "variable", "type": "nominal"}, {"field": "value", "type": "nominal"}, {"field": "component 0", "type": "quantitative"}, {"field": "component 1", "type": "quantitative"}], "x": {"axis": {"title": "component 0 \u2014 17.89%"}, "field": "component 0", "scale": {"zero": false}, "type": "quantitative"}, "y": {"axis": {"title": "component 1 \u2014 17.26%"}, "field": "component 1", "scale": {"zero": false}, "type": "quantitative"}}, "name": "view_5"}, {"mark": {"type": "text"}, "encoding": {"text": {"field": "label", "type": "nominal"}, "x": {"axis": {"title": "component 0 \u2014 17.89%"}, "field": "component 0", "scale": {"zero": false}, "type": "quantitative"}, "y": {"axis": {"title": "component 1 \u2014 17.26%"}, "field": "component 1", "scale": {"zero": false}, "type": "quantitative"}}}], "data": {"name": "data-1b5d86eb33e34293b962c0463fca57df"}, "params": [{"name": "param_19", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales", "views": ["view_5"]}], "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-1b5d86eb33e34293b962c0463fca57df": [{"component 0": 0.3633759093254314, "component 1": 0.8821609237887381, "variable": "column", "value": "Country_England", "label": "Country_England"}, {"component 0": -0.4433048100781375, "component 1": -0.27910549725356304, "variable": "column", "value": "Country_France", "label": "Country_France"}, {"component 0": 0.08182381428655279, "component 1": -0.5992514812880135, "variable": "column", "value": "Country_Germany", "label": "Country_Germany"}, {"component 0": -0.09567243796655617, "component 1": -0.19438011828314372, "variable": "column", "value": "voyage_0", "label": "voyage_0"}, {"component 0": 0.33593254534121647, "component 1": 0.682522670964121, "variable": "column", "value": "voyage_1", "label": "voyage_1"}, {"component 0": 0.0633246589356759, "component 1": -0.33729107946885994, "variable": "column", "value": "laugh_0", "label": "laugh_0"}, {"component 0": -0.26031073596556353, "component 1": 1.38651341526126, "variable": "column", "value": "laugh_1", "label": "laugh_1"}, {"component 0": 0.2797687623559455, "component 1": -0.0769540739487134, "variable": "column", "value": "photo.elevator_0", "label": "photo.elevator_0"}, {"component 0": -1.4651507533776027, "component 1": 0.4030089652324518, "variable": "column", "value": "photo.elevator_1", "label": "photo.elevator_1"}, {"component 0": -0.3228961352425886, "component 1": -0.0024100711336874662, "variable": "column", "value": "photo.beach_0", "label": "photo.beach_0"}, {"component 0": 1.55805222539385, "component 1": 0.011629178188764052, "variable": "column", "value": "photo.beach_1", "label": "photo.beach_1"}]}}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "circle", "size": 50}, "encoding": {"color": {"field": "variable", "type": "nominal"}, "tooltip": [{"field": "variable", "type": "nominal"}, {"field": "value", "type": "nominal"}, {"field": "component 0", "type": "quantitative"}, {"field": "component 1", "type": "quantitative"}], "x": {"axis": {"title": "component 0 \u2014 17.89%"}, "field": "component 0", "scale": {"zero": false}, "type": "quantitative"}, "y": {"axis": {"title": "component 1 \u2014 17.26%"}, "field": "component 1", "scale": {"zero": false}, "type": "quantitative"}}, "name": "view_1"}, {"mark": {"type": "text"}, "encoding": {"text": {"field": "label", "type": "nominal"}, "x": {"axis": {"title": "component 0 \u2014 17.89%"}, "field": "component 0", "scale": {"zero": false}, "type": "quantitative"}, "y": {"axis": {"title": "component 1 \u2014 17.26%"}, "field": "component 1", "scale": {"zero": false}, "type": "quantitative"}}}], "data": {"name": "data-1b5d86eb33e34293b962c0463fca57df"}, "params": [{"name": "param_3", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales", "views": ["view_1"]}], "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-1b5d86eb33e34293b962c0463fca57df": [{"component 0": 0.3633759093254314, "component 1": 0.8821609237887381, "variable": "column", "value": "Country_England", "label": "Country_England"}, {"component 0": -0.4433048100781375, "component 1": -0.27910549725356304, "variable": "column", "value": "Country_France", "label": "Country_France"}, {"component 0": 0.08182381428655279, "component 1": -0.5992514812880135, "variable": "column", "value": "Country_Germany", "label": "Country_Germany"}, {"component 0": -0.09567243796655617, "component 1": -0.19438011828314372, "variable": "column", "value": "voyage_0", "label": "voyage_0"}, {"component 0": 0.33593254534121647, "component 1": 0.682522670964121, "variable": "column", "value": "voyage_1", "label": "voyage_1"}, {"component 0": 0.0633246589356759, "component 1": -0.33729107946885994, "variable": "column", "value": "laugh_0", "label": "laugh_0"}, {"component 0": -0.26031073596556353, "component 1": 1.38651341526126, "variable": "column", "value": "laugh_1", "label": "laugh_1"}, {"component 0": 0.2797687623559455, "component 1": -0.0769540739487134, "variable": "column", "value": "photo.elevator_0", "label": "photo.elevator_0"}, {"component 0": -1.4651507533776027, "component 1": 0.4030089652324518, "variable": "column", "value": "photo.elevator_1", "label": "photo.elevator_1"}, {"component 0": -0.3228961352425886, "component 1": -0.0024100711336874662, "variable": "column", "value": "photo.beach_0", "label": "photo.beach_0"}, {"component 0": 1.55805222539385, "component 1": 0.011629178188764052, "variable": "column", "value": "photo.beach_1", "label": "photo.beach_1"}]}}, {"mode": "vega-lite"});
 </script>
 </div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">## Doing MCA plot with Plotly</span>
+
+<span class="c1"># Fit the MCA model</span>
+<span class="n">mca</span> <span class="o">=</span> <span class="n">prince</span><span class="o">.</span><span class="n">MCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">users_qualit</span><span class="p">)</span>
+
+<span class="c1"># Get the coordinates of the columns (categorical levels)</span>
+<span class="n">column_coords</span> <span class="o">=</span> <span class="n">mca</span><span class="o">.</span><span class="n">column_coordinates</span><span class="p">(</span><span class="n">users_qualit</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">column_coords</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'label'</span><span class="p">,</span> <span class="s1">'x'</span><span class="p">,</span> <span class="s1">'y'</span><span class="p">]</span>  <span class="c1"># Rename for clarity</span>
+
+<span class="c1"># Plot with Plotly</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">column_coords</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">'x'</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">'y'</span><span class="p">,</span>
+    <span class="n">text</span><span class="o">=</span><span class="s1">'label'</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">'Figure 2 : MCA of Tinder Users - Qualitative Variables (with Plotly)'</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s1">'x'</span><span class="p">:</span> <span class="s1">'Component 1'</span><span class="p">,</span> <span class="s1">'y'</span><span class="p">:</span> <span class="s1">'Component 2'</span><span class="p">},</span>
+<span class="p">)</span>
+
+<span class="c1"># Make labels show up on hover and as text</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_traces</span><span class="p">(</span><span class="n">textposition</span><span class="o">=</span><span class="s1">'top center'</span><span class="p">)</span>
+
+<span class="c1"># Save the interactive HTML file</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">write_html</span><span class="p">(</span><span class="s2">"Figure2_MCA_of_tinder_users_qualitative_variables_(with_plotly).html"</span><span class="p">)</span>
+
+<span class="c1"># Show the interactive plot</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 </div>
 </div>
 </div>
