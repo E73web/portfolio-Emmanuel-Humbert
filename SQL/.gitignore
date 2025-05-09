@@ -1,0 +1,35 @@
+# Ignore all plots and figures (assumes they are outputs)
+**/plots/
+*.png
+*.jpg
+*.jpeg
+*.svg
+
+# VS Code settings and extensions
+.vscode/
+*.code-workspace
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore environment and data folders
+.env/
+.venv/
+env/
+venv/
+*.env
+
+# Ignore Excel or CSV dumps (if not needed in Git)
+*.csv
+*.xls
+*.xlsx
